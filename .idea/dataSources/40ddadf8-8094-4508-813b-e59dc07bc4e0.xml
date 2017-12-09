@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="bibliografias@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="bibliografias">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="bibliografia"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="sys"/>
+    <table id="8" parent="2" name="academia"/>
+    <table id="9" parent="2" name="asignatura"/>
+    <table id="10" parent="2" name="carrera"/>
+    <table id="11" parent="2" name="ciclo_escolar"/>
+    <table id="12" parent="2" name="departamento"/>
+    <table id="13" parent="2" name="docente"/>
+    <table id="14" parent="2" name="instituto"/>
+    <table id="15" parent="2" name="libro"/>
+    <table id="16" parent="2" name="listade_libros"/>
+    <table id="17" parent="2" name="solicitud"/>
+    <column id="18" parent="8" name="Clave">
+      <Position>1</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="8" name="Nombre">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="20" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Clave</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="21" parent="9" name="ClaveAsig">
+      <Position>1</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="9" name="NombreAsignatura">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="23" parent="9" name="Creditos">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="24" parent="9" name="Asignaturacol">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="25" parent="9" name="ClaveCarrera">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="26" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ClaveAsig</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="10" name="ClaveCarrera">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="10" name="Nombre">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="29" parent="10" name="Direccion">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="30" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ClaveCarrera</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="31" parent="11" name="Clave">
+      <Position>1</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="11" name="Nombre">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="33" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Clave</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="12" name="Nombre">
+      <Position>1</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="12" name="Titular">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="36" parent="12" name="Edificio">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="37" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Nombre</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="38" parent="13" name="RfcDoce">
+      <Position>1</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="13" name="Nombre">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="40" parent="13" name="Apellido_paterno">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="41" parent="13" name="Apellido_materno">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="42" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>RfcDoce</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="43" parent="14" name="ClaveInst">
+      <Position>1</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="14" name="NombreInst">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="45" parent="14" name="DireccionInst">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="46" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ClaveInst</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="47" parent="15" name="Nombre">
+      <Position>1</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="48" parent="15" name="Autores">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="49" parent="15" name="Editorial">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="50" parent="15" name="Año">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="51" parent="15" name="ISBN">
+      <Position>5</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="15" name="Edicion">
+      <Position>6</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <key id="53" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ISBN</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="54" parent="16" name="No_solicitud">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="55" parent="16" name="ISBN">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="56" parent="16" name="Asignatura">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="57" parent="17" name="Fecha">
+      <Position>1</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="58" parent="17" name="Nombre_acad">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="59" parent="17" name="Clave_ciclo">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="60" parent="17" name="Nombre_departamento">
+      <Position>4</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="61" parent="17" name="docente_RfcDoce">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="62" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>docente_RfcDoce</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
